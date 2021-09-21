@@ -71,6 +71,5 @@ class Validation:
                         return zip
                     else:
                         logger.error("Invalid zip")
-
             except ValueError:
                 logger.error("Invalid zip")
