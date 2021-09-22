@@ -1,0 +1,12 @@
+{
+  "Rice": {
+    "Name": "Basmati",
+    "Price/kg": 50.0,
+    "Price for 60 Rice": 3000.0
+  },
+  "Wheat": {
+    "Name": "Good Wheat",
+    "Price/kg": 36.78,
+    "Price for 70 Wheat": 2574.6
+  }
+}
