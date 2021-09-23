@@ -1,0 +1,7 @@
+{
+    "FULL_DAY_HOURS" : 8,
+    "HALF_DAY_HOURS" : 4,
+    "WAGE_PER_HOUR"  : 20,
+    "MONTHLY_DAYS" : 20,
+    "MONTHLY_HOURS" : 100
+}
