@@ -1,23 +1,10 @@
-# def create_board():
-# # Create the tic tac toe board
-#     board = []
-#     for i in range(3):
-#         row = []
-#         for j in range(3):
-#             row.append("-")
-#         board.append(row)
-
-# # Print the tic tac toe board
-#     print("The Tic Tac Toe Game board")
-#     for i in range(3):
-#         for j in range(3):
-#             print(board[i][j], end=" ")
-#         print()
-
-# if __name__ == '__main__':
-#     create_board()
-    
-
+'''
+* @Author: Mohammad Fatha.
+* @Date: 2021-09-17 20:05  
+* @Last Modified by: Mohammad Fatha
+* @Last Modified time: 2021-09-17 20:30
+* @Title: Tic Tac Teo Game 
+'''
 import random
 
 class TicTacToe:
@@ -26,6 +13,11 @@ class TicTacToe:
         self.board = []
 
     def create_board(self):
+        """
+            Description:
+                    This Function is use generate the 3x3 tic tac teo board
+                    using 2D array concept
+        """ 
         for i in range(3):
             row = []
             for j in range(3):
@@ -33,9 +25,18 @@ class TicTacToe:
             self.board.append(row)
 
     def get_random_first_player(self):
+        """
+            Description:
+                    This function is use to select the person
+        """ 
         return random.randint(0, 1)
 
     def fix_spot(self, row, col, player):
+        """
+            Description:
+                This function is use to fix the spot of the players
+                on the specific positions to play game
+        """ 
         self.board[row][col] = player
 
     def is_player_win(self, player):
@@ -88,6 +89,11 @@ class TicTacToe:
         return True
 
     def is_board_filled(self):
+        """
+            Description:
+                This function is used to check wheather the board is filled
+                or is there any space in it
+        """ 
         for row in self.board:
             for item in row:
                 if item == '-':
@@ -95,15 +101,29 @@ class TicTacToe:
         return True
 
     def swap_player_turn(self, player):
+        """
+            Description:
+                This is function is use to select play either X or O
+        """ 
         return 'X' if player == 'O' else 'O'
 
     def show_board(self):
+        """
+            Description:
+                This function is used to print tha 3x3 tic tac teo game board
+
+        """ 
         for row in self.board:
             for item in row:
                 print(item, end=" ")
             print()
 
     def start(self):
+        """
+            Description:
+                This function is use to start the tic tac teo game
+                from this function the other funnctions are called 
+        """ 
         self.create_board()
 
         player = 'X' if self.get_random_first_player() == 1 else 'O'
@@ -136,6 +156,7 @@ class TicTacToe:
         # showing the final view of board
         print()
         self.show_board()
+
 
 
 # starting the game
